@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Grafik Tasarim";
+    ViewBag.Description = "Grafik Tasarım Hizmetleri, Kurumsal Kimlik, Logo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="titlepage">
+                <h2>GRAFİK TASARIM</h2>
+
+                <span>
+                    Grafik tasarım bir mesajı iletmek, bir görseli geliştirmek veya bir düşünceyi görselleştirmek için metnin ve görsellerin algılanabilir ve görülebilir bir düzlemde, iki boyutlu veya üç boyutlu olarak organize edilmesini içeren yaratıcı bir süreçtir.
+                </span>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row bg-light mt-5">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <figure>
+                <img src="~/images/kurumsaltasarim.gif" alt="Kurumsal Tasarım gif" />
+            </figure>
+
+
+        </div>
+
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+            <h1 class="mt-3">Grafik Tasarım Paketleri</h1>
+            <p>Arte dijital tarafından sağlamış olduğumuz grafik tasarım paketleri aşağıdaki gibidir.</p><br />
+            <p>Kurumsal Kimlik, Reklam Paketi</p>
+            <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+            <div>
+                <a href="@Url.Action("GrafikTasarimPaketleri", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row bg-light mt-5">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+            <h1 class="mt-3">Grafik Tasarım Hizmetleri</h1>
+            <p>Arte dijital tarafından sağlamış olduğumuz grafik tasarım hizmetleri aşağıdaki gibidir.</p><br />
+            <p>Logo, Afiş, Billboard, Menü, Ambalaj, Davetiye, Giyim, İllüstrasyon</p>
+            <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <figure>
+                <img src="~/images/logo.gif" alt="Logo Arte Dijital"/>
+            </figure>
+            <div>
+                <a href="@Url.Action("GrafikTasarimHizmetleri", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+            </div>
+
+        </div>
+    </div>
+
+   
+
+
+</div>

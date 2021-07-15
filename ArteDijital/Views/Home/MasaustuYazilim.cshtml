@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Masaüstü Yazılım";
+    ViewBag.Decription = "Arte Dijital Masaüstü Yazılım, Yazılım Programları, Stok Takip";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+
+                    <span>
+                        <img src="~/images/masaustuyazilim.png" alt="Masaüstü Yazılım" style="width:100%!important;" />
+                    </span>
+                    <br />
+                    <p>Masaüstü yazılım hizmetleri iş gücünüzü hafifletmek ve verilerinizi güvenle saklayabilmek için üretilmiş yazılımlardır. Masaüstü yazılımları kazancınızı arttıracak ve iş gücünüzü hafifletecektir.</p>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Bilgisayar Programları
+
+                </h1>
+                <p>
+                    İhtiyacınızı , çalışma ortamınızı ve gereklilikleri değerlendirerek sizin için bilgisayar programı yapıyoruz. Bilgisayar programları sayesinde daha verimli ve kazançlı çalışma imkanları sunuyoruz.
+                </p>
+                <br />
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Restoran Otomasyonları
+
+                </h1>
+
+                <p>
+                    Restoranlar için yazılan bu otomasyon programlarının size özgü tasarlanmasını ister miydiniz? O zaman doğru yerdesiniz Arte dijital deneyimli kadrosu ile rakiplerinizin önüne geçebileceğiniz restoran otomasyon programlarını sizin için gerçekleştirebilir.
+                </p>
+                <br />
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">Stok Takibi Programları</h1>
+                <p>
+                    Stoklarınızın karışık ve bulunamaz halde olmaması için stok takip programları kullanmak
+                    her zaman iş gücünü hafifletir. Bu konuda bizimle çalışmak isterseniz size uygun stok takip programları ile karışıklığa son verebiliriz.
+                </p>
+                <br />
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">Masaüstü Yazılım Fiyatlandırma</h1>
+                <p>Profesyonel ekibimiz tarafından verilen bütün hizmetlerle ilgili bizimle iletişime geçerek fiyat öğrenebilirsiniz.</p>
+
+                @{Html.RenderAction("hizmetiletisim", "Partial");}
+
+            </div>
+        </div>
+    </div>

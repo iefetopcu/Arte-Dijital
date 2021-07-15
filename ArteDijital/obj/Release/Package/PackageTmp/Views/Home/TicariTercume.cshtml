@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Ticari Tercüme";
+    ViewBag.Description = " Ticari Tercüme - İngilizce, İspanyolca, Almanca, Fransızca, Arapça";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="titlepage">
+
+                <span>
+                    <img src="~/images/ticaritercume.png" alt="Ticari Tercüme" style="width:100%!important;" />
+                </span>
+                <br />
+                <p>Ticari çeviriler, uluslararası şirketlerin farklı ülkelerden şirketler ve devlet kurumları veya şirket içinde farklı ülkelerden çalışanlar arasında bilanço, faaliyet, alım-satım işlemi gibi raporların, fatura vb. muhasebe evraklarının, ticari yazışmaların çevirisini belirtir.</p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row bg-light mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+            <h1 class="mt-3">Ticari Tercüme Hizmetleri</h1>
+            <p>
+                Uluslararası ticareti gerçekleştirmede iletişim en önemli etmenlerden biridir; doğru iletişimin yapılması da ancak doğru tercüme ve çeviri yoluyla gerçekleşebilmektedir.
+            </p>
+            <br />
+            <p>
+                Art-E Dijital olarak dünyanın dört bir yanı ile olan ticari iletişiminizi gizliliğinize en yüksek önceliği vererek uzman tercümanlarımız aracılığıyla doğru ve hızlı bir biçimde sağlıyoruz.
+            </p>
+            <br />
+        </div>
+    </div>
+
+    <div class="row bg-light mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+            <h1 class="mt-3">Ticari Tercüme Yaptığımız Diller</h1>
+            <table width="100%">
+                <tr>
+                    <td><h6 class="text-info"><b>İngilizce</b></h6></td>
+                    <td><h6 class="text-info"><b>Almanca</b></h6></td>
+                    <td><h6 class="text-info"><b>İspanyolca</b></h6></td>
+                    <td><h6 class="text-info"><b>Fransızca</b></h6></td>
+                    <td><h6 class="text-info"><b>Arapça</b></h6></td>
+                </tr>
+            </table>
+            <br />
+        </div>
+    </div>
+
+    <div class="row bg-light mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+            <h1 class="mt-3">Ticari Tercümede Fiyatlandırma</h1>
+            <p>Profesyonel ekibimiz tarafından verilen bütün hizmetlerle ilgili bizimle iletişime geçerek fiyat öğrenebilirsiniz.</p>
+
+            @{Html.RenderAction("hizmetiletisim", "Partial");}
+
+        </div>
+    </div>
+</div>
+

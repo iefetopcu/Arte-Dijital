@@ -1,0 +1,29 @@
+﻿@using ArteDijital.Models.Entity
+
+
+    <div class="row">
+
+
+        @foreach (var indexpost in Model)
+        {
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="blog-box">
+                <figure>
+                    <a href="@Url.Action("BlogOku","Blog", new { posturl = indexpost.posturl })"><img src="@indexpost.photourl" alt="#" /></a>
+                    <span>@indexpost.possttime.ToString("dd.MM.yyyy")</span>
+                </figure>
+                <div class="travel">
+                    <span>Yazar :  @indexpost.usertable.usernick</span>
+                    <p><strong class="Comment"> @indexpost.views </strong>Görüntülenme</p>
+
+                </div>
+                <h3><a href="@Url.Action("BlogOku","Blog", new { posturl = indexpost.posturl })">@indexpost.title</a></h3>
+                <p>@indexpost.spottext</p>
+            </div>
+        </div>
+
+
+                }
+
+            
+        </div>

@@ -1,0 +1,55 @@
+﻿@using ArteDijital.Models.Entity
+
+@{
+    ViewBag.Title = "Oyun ile ilgili blog yazıları - Arte İnternet Bloğu";
+    ViewBag.Description = "Türkiyenin internet bloğu, Arte Blog";
+    Layout = "~/Views/Shared/BlogView.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-9">
+        <div class="row">
+
+            @foreach (var indexpost in Model)
+            {
+
+                <div class="col-lg-6">
+                    <div class="col-lg-12 col-md-12 mb-5">
+                        <div class="blog-item">
+                            <div class="blog-thumb">
+                                <h1 class="mt-3 mb-3" style="font-size:14pt!important; height:40px;"><a href="@Url.Action("BlogOku","Blog", new { posturl = indexpost.posturl })">@indexpost.title</a></h1>
+                                <<a href="@Url.Action("BlogOku","Blog", new { posturl = indexpost.posturl })"><img src="@indexpost.photourl" alt="" class="img-fluid "></a>
+</div>
+
+                            <div class="blog-item-content">
+                                <div class="blog-item-meta mb-3 mt-4">
+
+                                    <span class="text-muted text-capitalize mr-3"><i class="icofont-eye mr-2"></i>@indexpost.views</span>
+                                    <span class="text-muted text-capitalize mr-3"><i class="icofont-simple-smile mr-2"></i>@indexpost.postlike</span>
+                                    <span class="text-muted text-capitalize mr-3"><i class="icofont-sad mr-2"></i>@indexpost.postdislike</span>
+                                    <span class="text-black text-capitalize mr-3"><i class="icofont-calendar mr-1"></i> @indexpost.possttime.ToString("dd.MM.yyyy")</span>
+                                </div>
+                                <h6 style="color:orangered;">@indexpost.category.menuler.menuname - @indexpost.category.categoryname   <a href="@Url.Action("KullaniciYazilari","Blog", new { id = indexpost.userid })" style="margin-left:20px;"><i class="icofont-ui-user"></i> @indexpost.usertable.usernick </a></h6>
+
+
+                                <p class="mb-4" style="height:130px;">@indexpost.spottext ...</p>
+                                <a href="@Url.Action("BlogOku","Blog", new { posturl = indexpost.posturl })" target="_blank" class="btn btn-main btn-icon btn-round-full">Devamını Oku <i class="icofont-simple-right ml-2  "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3">
+        @{Html.RenderAction("SideBar", "Partial");}
+    </div>
+
+
+</div>
+

@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="artedijitalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menuid" Type="bigint" />
+    <Property Name="categoryname" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <EntityType Name="comenttable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="postid" Type="bigint" />
+    <Property Name="title" Type="varchar(max)" />
+    <Property Name="comentcontent" Type="varchar(max)" />
+    <Property Name="commenttime" Type="datetime" />
+    <Property Name="userid" Type="bigint" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <EntityType Name="footermessage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="varchar(max)" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="footerexplanation" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+    <Property Name="messagetime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FreelanceJob">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobname" Type="varchar" MaxLength="100" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Freelancer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="surname" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="gsm" Type="varchar" MaxLength="100" />
+    <Property Name="websiteurl" Type="varchar" MaxLength="100" />
+    <Property Name="jobid" Type="bigint" />
+    <Property Name="jobexplanation" Type="varchar(max)" />
+    <Property Name="userphotourl" Type="varchar(max)" />
+    <Property Name="city" Type="varchar(max)" />
+    <Property Name="explanation" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+    <Property Name="time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="menuler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menuname" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Msgservicerequest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="surname" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="gsm" Type="varchar" MaxLength="50" />
+    <Property Name="subject" Type="varchar(max)" />
+    <Property Name="title" Type="varchar(max)" />
+    <Property Name="explanation" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+    <Property Name="messagetime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="posttable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photourl" Type="varchar(max)" />
+    <Property Name="categoryid" Type="bigint" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="hashtags" Type="varchar(max)" />
+    <Property Name="userid" Type="bigint" />
+    <Property Name="title" Type="varchar(max)" />
+    <Property Name="postcontent" Type="varchar(max)" />
+    <Property Name="spottext" Type="varchar(max)" />
+    <Property Name="views" Type="bigint" />
+    <Property Name="postlike" Type="bigint" />
+    <Property Name="postdislike" Type="bigint" />
+    <Property Name="possttime" Type="datetime" />
+    <Property Name="posturl" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="userroles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userrolename" Type="varchar(max)" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <EntityType Name="usertable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar(max)" />
+    <Property Name="usersurname" Type="varchar(max)" />
+    <Property Name="useremail" Type="varchar(max)" />
+    <Property Name="userpassword" Type="varchar(max)" />
+    <Property Name="userphotourl" Type="varchar(max)" />
+    <Property Name="usernick" Type="varchar(max)" />
+    <Property Name="userauthorityID" Type="bigint" />
+    <Property Name="isaktif" Type="bigint" />
+  </EntityType>
+  <Association Name="FK_category_menuler">
+    <End Role="menuler" Type="Self.menuler" Multiplicity="0..1" />
+    <End Role="category" Type="Self.category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menuler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="menuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comenttable_posttable">
+    <End Role="posttable" Type="Self.posttable" Multiplicity="0..1" />
+    <End Role="comenttable" Type="Self.comenttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="posttable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="comenttable">
+        <PropertyRef Name="postid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comenttable_usertable">
+    <End Role="usertable" Type="Self.usertable" Multiplicity="0..1" />
+    <End Role="comenttable" Type="Self.comenttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="comenttable">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Freelancer_FreelanceJob">
+    <End Role="FreelanceJob" Type="Self.FreelanceJob" Multiplicity="0..1" />
+    <End Role="Freelancer" Type="Self.Freelancer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FreelanceJob">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Freelancer">
+        <PropertyRef Name="jobid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_posttable_category">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="posttable" Type="Self.posttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="posttable">
+        <PropertyRef Name="categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_posttable_usertable">
+    <End Role="usertable" Type="Self.usertable" Multiplicity="0..1" />
+    <End Role="posttable" Type="Self.posttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="posttable">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usertable_userroles1">
+    <End Role="userroles" Type="Self.userroles" Multiplicity="0..1" />
+    <End Role="usertable" Type="Self.usertable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userroles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="usertable">
+        <PropertyRef Name="userauthorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="artedijitalModelStoreContainer">
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comenttable" EntityType="Self.comenttable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="footermessage" EntityType="Self.footermessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FreelanceJob" EntityType="Self.FreelanceJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Freelancer" EntityType="Self.Freelancer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="menuler" EntityType="Self.menuler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Msgservicerequest" EntityType="Self.Msgservicerequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="posttable" EntityType="Self.posttable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userroles" EntityType="Self.userroles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usertable" EntityType="Self.usertable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_category_menuler" Association="Self.FK_category_menuler">
+      <End Role="menuler" EntitySet="menuler" />
+      <End Role="category" EntitySet="category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comenttable_posttable" Association="Self.FK_comenttable_posttable">
+      <End Role="posttable" EntitySet="posttable" />
+      <End Role="comenttable" EntitySet="comenttable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comenttable_usertable" Association="Self.FK_comenttable_usertable">
+      <End Role="usertable" EntitySet="usertable" />
+      <End Role="comenttable" EntitySet="comenttable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Freelancer_FreelanceJob" Association="Self.FK_Freelancer_FreelanceJob">
+      <End Role="FreelanceJob" EntitySet="FreelanceJob" />
+      <End Role="Freelancer" EntitySet="Freelancer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_posttable_category" Association="Self.FK_posttable_category">
+      <End Role="category" EntitySet="category" />
+      <End Role="posttable" EntitySet="posttable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_posttable_usertable" Association="Self.FK_posttable_usertable">
+      <End Role="usertable" EntitySet="usertable" />
+      <End Role="posttable" EntitySet="posttable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usertable_userroles1" Association="Self.FK_usertable_userroles1">
+      <End Role="userroles" EntitySet="userroles" />
+      <End Role="usertable" EntitySet="usertable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

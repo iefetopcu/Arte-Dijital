@@ -1,0 +1,42 @@
+﻿@using ArteDijital.Models.Entity
+
+@{
+    ViewBag.Title = "Kategori";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>Kategori</h2>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Kategori Adı</th>
+            <th scope="col">Menü Adı</th>
+            <th scope="col">İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var kategori in Model)
+        {
+
+            <tr>
+                <th scope="row">@kategori.id</th>
+                <td>@kategori.categoryname</td>
+                <td>@kategori.menuler.menuname</td>
+                <td>
+                    <a href="@Url.Action("KategoriSil", "Admin" , new { id = kategori.id })" onclick="return confirm('Bu Kategoriyi Silmek İstediğinize Emin Misiniz?')"><button type="button" class="btn btn-danger">Sil</button></a>
+                    <a href="@Url.Action("KategoriDuzenle", "Admin" , new { id = kategori.id })"><button type="button" class="btn btn-info">Düzenle</button></a>
+                </td>
+            </tr>
+
+        }
+
+
+    </tbody>
+</table>
+<a href="@Url.Action("YeniKategori", "Admin")"><button type="button" class="btn btn-info">Yeni Kategori Ekle</button></a>
+
+

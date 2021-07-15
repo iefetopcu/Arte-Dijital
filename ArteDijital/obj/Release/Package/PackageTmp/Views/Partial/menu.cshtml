@@ -1,0 +1,114 @@
+﻿
+@using ArteDijital.Models.Entity
+
+<nav class="navbar navbar-expand-lg navigation" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="@Url.Action("Index","Blog")">
+            <img src="~/images/artelogo.png" alt="" height="40px">
+            
+        </a>
+        
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icofont-navigation-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarmain">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("Index", "Blog")">Anasayfa</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("Guncel", "Blog")">Güncel</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Yazılım <i class="icofont-thin-down"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                        @foreach (var menulist in Model)
+                        {
+                            if (menulist.menuid == 1)
+                            {
+                                <li><a class="dropdown-item" href="@Url.Action("Kategori", "Blog" , new {id = menulist.id})">@menulist.categoryname</a></li>
+
+                            }
+
+
+                        }
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Donanım <i class="icofont-thin-down"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                        @foreach (var menulist in Model)
+                        {
+                            if (menulist.menuid == 2)
+                            {
+                                <li><a class="dropdown-item" href="@Url.Action("Kategori", "Blog" , new {id = menulist.id})">@menulist.categoryname</a></li>
+
+                            }
+                        }
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teknoloji <i class="icofont-thin-down"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                        @foreach (var menulist in Model)
+                        {
+                            if (menulist.menuid == 3)
+                            {
+                                <li><a class="dropdown-item" href="@Url.Action("Kategori", "Blog" , new {id = menulist.id})">@menulist.categoryname</a></li>
+
+                            }
+
+
+                        }
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oyun <i class="icofont-thin-down"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                        @foreach (var menulist in Model)
+                        {
+                            if (menulist.menuid == 4)
+                            {
+                                <li><a class="dropdown-item" href="@Url.Action("Kategori", "Blog" , new {id = menulist.id})">@menulist.categoryname</a></li>
+
+                            }
+
+
+                        }
+                    </ul>
+                </li>
+                @if (Session["MySessionUser"] != null)
+                {
+                    if (((ArteDijital.Models.Entity.usertable)Session["MySessionUser"]).userauthorityID == 1 || ((ArteDijital.Models.Entity.usertable)Session["MySessionUser"]).userauthorityID == 2)
+                    {
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Index", "Admin")">
+                            Admin
+                        </a>
+                    </li>
+                    
+                    }
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("CikisYap", "Blog")">
+                            Çıkış Yap
+                        </a>
+                    </li>
+
+                }
+                else
+                {
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("GirisYap", "Blog")">
+                            Giriş Yap
+                        </a>
+                    </li>
+
+                }
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

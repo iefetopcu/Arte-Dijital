@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="artedijitalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menuid" Type="Int64" />
+    <Property Name="categoryname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="menuler" Relationship="Self.FK_category_menuler" FromRole="category" ToRole="menuler" />
+    <NavigationProperty Name="posttables" Relationship="Self.FK_posttable_category" FromRole="category" ToRole="posttable" />
+  </EntityType>
+  <EntityType Name="comenttable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="postid" Type="Int64" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="comentcontent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="commenttime" Type="DateTime" Precision="3" />
+    <Property Name="userid" Type="Int64" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="posttable" Relationship="Self.FK_comenttable_posttable" FromRole="comenttable" ToRole="posttable" />
+    <NavigationProperty Name="usertable" Relationship="Self.FK_comenttable_usertable" FromRole="comenttable" ToRole="usertable" />
+  </EntityType>
+  <EntityType Name="footermessage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="footerexplanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <Property Name="messagetime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="FreelanceJob">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="Freelancers" Relationship="Self.FK_Freelancer_FreelanceJob" FromRole="FreelanceJob" ToRole="Freelancer" />
+  </EntityType>
+  <EntityType Name="Freelancer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="surname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gsm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="websiteurl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="jobid" Type="Int64" />
+    <Property Name="jobexplanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userphotourl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="FreelanceJob" Relationship="Self.FK_Freelancer_FreelanceJob" FromRole="Freelancer" ToRole="FreelanceJob" />
+  </EntityType>
+  <EntityType Name="menuler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menuname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="categories" Relationship="Self.FK_category_menuler" FromRole="menuler" ToRole="category" />
+  </EntityType>
+  <EntityType Name="Msgservicerequest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="surname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gsm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <Property Name="messagetime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="posttable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="photourl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="categoryid" Type="Int64" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="hashtags" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userid" Type="Int64" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="postcontent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="spottext" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="views" Type="Int64" />
+    <Property Name="postlike" Type="Int64" />
+    <Property Name="postdislike" Type="Int64" />
+    <Property Name="possttime" Type="DateTime" Precision="3" />
+    <Property Name="posturl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="category" Relationship="Self.FK_posttable_category" FromRole="posttable" ToRole="category" />
+    <NavigationProperty Name="comenttables" Relationship="Self.FK_comenttable_posttable" FromRole="posttable" ToRole="comenttable" />
+    <NavigationProperty Name="usertable" Relationship="Self.FK_posttable_usertable" FromRole="posttable" ToRole="usertable" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="userrole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userrolename" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="usertables" Relationship="Self.FK_usertable_userroles1" FromRole="userroles" ToRole="usertable" />
+  </EntityType>
+  <EntityType Name="usertable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usersurname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="useremail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userpassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userphotourl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usernick" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userauthorityID" Type="Int64" />
+    <Property Name="isaktif" Type="Int64" />
+    <NavigationProperty Name="comenttables" Relationship="Self.FK_comenttable_usertable" FromRole="usertable" ToRole="comenttable" />
+    <NavigationProperty Name="posttables" Relationship="Self.FK_posttable_usertable" FromRole="usertable" ToRole="posttable" />
+    <NavigationProperty Name="userrole" Relationship="Self.FK_usertable_userroles1" FromRole="usertable" ToRole="userroles" />
+  </EntityType>
+  <Association Name="FK_category_menuler">
+    <End Role="menuler" Type="Self.menuler" Multiplicity="0..1" />
+    <End Role="category" Type="Self.category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menuler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="menuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_posttable_category">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="posttable" Type="Self.posttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="posttable">
+        <PropertyRef Name="categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comenttable_posttable">
+    <End Role="posttable" Type="Self.posttable" Multiplicity="0..1" />
+    <End Role="comenttable" Type="Self.comenttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="posttable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="comenttable">
+        <PropertyRef Name="postid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comenttable_usertable">
+    <End Role="usertable" Type="Self.usertable" Multiplicity="0..1" />
+    <End Role="comenttable" Type="Self.comenttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="comenttable">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Freelancer_FreelanceJob">
+    <End Role="FreelanceJob" Type="Self.FreelanceJob" Multiplicity="0..1" />
+    <End Role="Freelancer" Type="Self.Freelancer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FreelanceJob">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Freelancer">
+        <PropertyRef Name="jobid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_posttable_usertable">
+    <End Role="usertable" Type="Self.usertable" Multiplicity="0..1" />
+    <End Role="posttable" Type="Self.posttable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="posttable">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usertable_userroles1">
+    <End Role="userroles" Type="Self.userrole" Multiplicity="0..1" />
+    <End Role="usertable" Type="Self.usertable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userroles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="usertable">
+        <PropertyRef Name="userauthorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="artedijitalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="comenttables" EntityType="Self.comenttable" />
+    <EntitySet Name="footermessages" EntityType="Self.footermessage" />
+    <EntitySet Name="FreelanceJobs" EntityType="Self.FreelanceJob" />
+    <EntitySet Name="Freelancers" EntityType="Self.Freelancer" />
+    <EntitySet Name="menulers" EntityType="Self.menuler" />
+    <EntitySet Name="Msgservicerequests" EntityType="Self.Msgservicerequest" />
+    <EntitySet Name="posttables" EntityType="Self.posttable" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="userroles" EntityType="Self.userrole" />
+    <EntitySet Name="usertables" EntityType="Self.usertable" />
+    <AssociationSet Name="FK_category_menuler" Association="Self.FK_category_menuler">
+      <End Role="menuler" EntitySet="menulers" />
+      <End Role="category" EntitySet="categories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_posttable_category" Association="Self.FK_posttable_category">
+      <End Role="category" EntitySet="categories" />
+      <End Role="posttable" EntitySet="posttables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comenttable_posttable" Association="Self.FK_comenttable_posttable">
+      <End Role="posttable" EntitySet="posttables" />
+      <End Role="comenttable" EntitySet="comenttables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comenttable_usertable" Association="Self.FK_comenttable_usertable">
+      <End Role="usertable" EntitySet="usertables" />
+      <End Role="comenttable" EntitySet="comenttables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Freelancer_FreelanceJob" Association="Self.FK_Freelancer_FreelanceJob">
+      <End Role="FreelanceJob" EntitySet="FreelanceJobs" />
+      <End Role="Freelancer" EntitySet="Freelancers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_posttable_usertable" Association="Self.FK_posttable_usertable">
+      <End Role="usertable" EntitySet="usertables" />
+      <End Role="posttable" EntitySet="posttables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usertable_userroles1" Association="Self.FK_usertable_userroles1">
+      <End Role="userroles" EntitySet="userroles" />
+      <End Role="usertable" EntitySet="usertables" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

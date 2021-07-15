@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Network Çözümleri";
+    ViewBag.Description = "Sucunu Kurulumu, Alt yapı, Network, Kamera Kurulumu , Format";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>NETWORK ÇÖZÜMLERİ</h2>
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/sistemyazici.gif" alt="Sistem Desteği"/>
+                </figure>
+
+
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Sistem & Yazıcı Desteği</h1>
+                <p> Sistem yazıcı desteği hizmetimizde bilgisayar sistemlerinin işleyişi ve bakımı, sağlıklı bir şekilde çalışması için verdiğimiz hizmetlerdir.</p>
+                <ul class="list-group mt-2">
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Sistem Bakımı</i>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Format</i>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Windows Yedekleme</i>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Donanım Desteği</i>
+                    </li>
+                </ul>
+
+                <div>
+                    <a href="@Url.Action("SistemYaziciDestegi", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Network & Sunucu Kurulumları</h1>
+                <p>Firmanızın sunucu kurulumları , network alt yapısı için iyileştirme çalışmaları yapıyoruz.</p>
+                <ul class="list-group mt-2">
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Server Kurulumu</i>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Altyapı yapılandırması</i>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Performans Testi</i>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/networksunucu.gif" alt="network"/>
+                </figure>
+                <div>
+                    <a href="@Url.Action("NetworkSunucuKurulumlari", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/iptabanli.gif" />
+                </figure>
+
+
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Ip Tabanlı Tüm Cihazlar</h1>
+                <p>Ofisiniz içersindeki bütün ip cihazların bir arada kusursuz çalışması ve internet hızının etkilenmemesi için gerekli ayarlar ve işlemleri yapıyoruz.</p>
+                <ul class="list-group mt-2">
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Kamera Kurulumu</i>
+                    </li>
+                    <li>
+                        <i class="fa fa-check" aria-hidden="true"> Access Point Kurulumu</i>
+                    </li>
+                </ul>
+
+                <div>
+                    <a href="@Url.Action("IpTabanliTumCihazlar", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        
+
+        
+
+
+    </div>

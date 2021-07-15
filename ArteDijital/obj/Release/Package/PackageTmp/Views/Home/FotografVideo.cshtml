@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Fotoğraf ve Video Çekimi";
+    ViewBag.Description = "Etkinlik Video Çekimi, Etkinlik Fotoğraf Çekimi , Fotoğraf Çekimi , Video Çekimi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>FOTOĞRAF & VIDEO</h2>
+
+                   
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/fotografcekimi.gif" alt="Fotoğraf Çekimi gif" />
+                </figure>
+
+
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Fotoğraf Çekimi</h1>
+                <p>Arte dijitalde bulacağınız fotoğraf çekimi hizmetleri aşağıdaki gibidir.</p><br />
+                <p>Kurumsal Çekimler, Özel Çekimler, Etkinlik Çekimleri, Konsept Çekimler</p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+
+
+                <div>
+                    <a href="@Url.Action("FotografCekimi", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Video Çekimi</h1>
+                <p>Arte dijitalde bulacağınız video çekimi hizmetleri aşağıdaki gibidir.</p><br />
+                <p>Tanıtım Filmi, Reklam Filmi, Etkinlik, Kısa Film, Video Animasyon</p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/videocekimi.gif" />
+                </figure>
+                <div>
+                    <a href="@Url.Action("VideoCekimi", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+
+
+
+    </div>

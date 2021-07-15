@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <script data-ad-client="ca-pub-2686397671999014" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WD3DB8NH9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2WD3DB8NH9');
+    </script>
+
+    <meta name="author" content="Efe Topcu" />
+    <link rel="shortcut icon" type="image/png" href="~/images/logoico.ico" />
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Arte Dijital - info@artedijital.com</title>
+    <meta name="description" content="@ViewBag.Description">
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <!-- fevicon -->
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+    <script data-ad-client="ca-pub-1234567890123456" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+
+<body class="main-layout">
+    @*<div class="loader_bg">
+            <div class="loader"><img src="~/images/loading.gif" alt="#" /></div>
+        </div>*@
+
+    <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="header_white_section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="header_information">
+                                <ul>
+                                    <li>
+                                        Istanbul - Turkey
+                                    </li>
+                                    <li>
+                                        <a href="mailto:info@artedijital.com">info@artedijital.com</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><i class="fa fa-phone" aria-hidden="true"> 530 245 73 59</i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="@Url.Action("Index", "Home")"><img src="~/images/artedijitallogo.gif" width="150"></a> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li>
+                                            <a href="@Url.Action("Index", "Home")">Anasayfa</a>
+                                        </li>
+                                        <li> <a href="@Url.Action("Index", "Blog")" target="_blank">Blog</a></li>
+                                        <li>
+                                            <a href="@Url.Action("ArteDijital", "Home")">Arte Dijital</a>
+                                            <ul class="menu-area-main">
+                                                <li> <a href="@Url.Action("Projelerimiz", "Home")">Projelerimiz</a> </li>
+                                                <li> <a href="@Url.Action("Referanslarimiz", "Home")">Referanslarımız</a> </li>
+                                                <li> <a href="@Url.Action("Amacimiz", "Home")">Amacımız</a> </li>
+                                                <li> <a href="@Url.Action("isortaklarimiz", "Home")">İş Ortaklarımız</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Hizmetler", "Home")" target="_blank">Hizmetler</a>
+                                            <ul class="menu-area-main">
+                                                <li> <a href="@Url.Action("YazilimCozumleri", "Home")">Yazılım Çözümleri</a> </li>
+                                                <li> <a href="@Url.Action("WebCozumleri", "Home")">Web Çözümleri</a> </li>
+                                                <li> <a href="@Url.Action("NetworkCozumleri", "Home")">Network Çözümleri</a> </li>
+                                                <li> <a href="@Url.Action("GrafikTasarim", "Home")">Grafik Tasarım</a> </li>
+                                                <li> <a href="@Url.Action("FotografVideo", "Home")">Fotoğraf & Video</a> </li>
+                                                <li> <a href="@Url.Action("Ceviri", "Home")">Çeviri & Tercüme</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("FreelancerOl", "Home")">Freelancer Ol</a>
+                                        </li>
+                                        <li><a href="@Url.Action("iletisim", "Home")">İletişim</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header inner -->
+    </header>
+    <div class="container-fluid body-content">
+        @if (ViewBag.Message == "ok")
+        {
+            <div class="container">
+                <div class="alert alert-success text-center" role="alert">
+                    <h4 class="alert-heading">Başarılı !</h4><br />
+                    <p>Göndermiş olduğunuz bilgiler bize ulaştı </p>
+                    <p class="mb-0">Sizinle en yakın sürede irtibata geçeceğiz.</p>
+                </div>
+            </div>
+
+        }
+
+        @if (ViewBag.footermessage == "ok")
+        {
+            <div class="container">
+                <div class="alert alert-success text-center" role="alert">
+                    <h4 class="alert-heading">Başarılı !</h4><br />
+                    <p>Göndermiş olduğunuz bilgiler bize ulaştı </p>
+                    <p class="mb-0">Sizinle en yakın sürede irtibata geçeceğiz.</p>
+                </div>
+            </div>
+
+        }
+        @RenderBody()
+
+
+    </div>
+
+    <footer>
+        <div id="contact" class="footer">
+            <div class="container">
+                <div class="row pdn-top-30">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <ul class="location_icon">
+                            <li> <a href="mailto:info@artedijital.com" target="_blank"><i class="fa fa-envelope white" aria-hidden="true" style="font-size:20pt;"></i></a></li>
+                            <li> <a href="https://www.instagram.com/artedijitalcom/" target="_blank"><i class="fa fa-instagram white" aria-hidden="true" style="font-size:20pt;"></i></a></li>
+                            <li> <a href="https://www.linkedin.com/company/arte-dijital" target="_blank"><i class="fa fa-linkedin white" aria-hidden="true" style="font-size:20pt;"></i></a></li>
+                            <li> <a href="https://wa.me/905302457359?text=Merhaba" target="_blank"><i class="fa fa-whatsapp white" aria-hidden="true" style="font-size:20pt;"></i></a></li>
+                            <li> <a href="https://www.youtube.com/channel/UCjYk6u2DxEek5C9DIRGgppQ" target="_blank"><i class="fa fa-youtube white" aria-hidden="true" style="font-size:20pt;"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="Follow">
+
+                            <span>
+                                Soğanlık Yeni Mah<br />
+                                Kartal - Istanbul, Türkiye<br />
+                                +90 530 245 73 59
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="Follow">
+                            <h3>Hızlı LİNKLER</h3>
+                            <ul class="link">
+                                <li> <a href="https://blog.artedijital.com/" target="_blank">Arte Blog</a></li>
+                                <li> <a href="@Url.Action("Hizmetler", "Home")">Hizmetler</a></li>
+                                <li> <a href="@Url.Action("FreelancerOl", "Home")">Freelancer Ol</a></li>
+                                <li> <a href="@Url.Action("ArteDijital", "Home")">Arte Dijital</a></li>
+                                <li> <a href="@Url.Action("iletisim", "Home")">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                        <form method="post" action="@Url.Action("FooterMessage", "Partial")">
+                            <div class="Follow">
+                                <h3>İLETİŞİM</h3>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <input class="Newsletter" placeholder="İsim" type="text" required name="name">
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <input class="Newsletter" placeholder="Email" type="email" required name="email">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <textarea class="textarea" placeholder="Açıklama" type="text" required name="footerexplanation"></textarea>
+                                    </div>
+                                </div>
+                                <button class="Subscribe">Gönder</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <p>Tüm Hakları Saklıdır <a href="https://www.artedijital.com/">Arte Dijital</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery-3.0.0.min.js"></script>
+    <script src="~/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/js/custom.js"></script>
+    <!-- javascript -->
+    <script src="~/js/owl.carousel.js"></script>
+
+    <div style="display:none">
+        <a href="https://www.google.com/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ac/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ad/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ae/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.af/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.ag/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.ai/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.al/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.am/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.co.ao/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.ar/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.as/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.at/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.au/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.az/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ba/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.bd/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.be/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.bf/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.bg/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.bh/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.bi/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.bj/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.bn/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.bo/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.br/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.bs/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.bt/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.co.bw/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.by/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.bz/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ca/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.kh/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cc/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cd/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cf/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cat/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cg/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ch/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.ci/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.co.ck/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cl/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cm/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cn/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.g.cn/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.co/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.co.cr/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.cu/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cv/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.cy/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.cz/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.de/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.dj/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.dk/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.dm/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+        <a href="https://www.google.com.do/url?sa=i&url=http://www.artedijital.com/">arte dijital</a>
+
+
+    </div>
+</body>
+
+
+</html>

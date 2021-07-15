@@ -1,0 +1,20 @@
+﻿@model ArteDijital.Models.Entity.ProjectTable
+
+<form action="@Url.Action("ProjectAdd", "AdminPartial")" method="post" enctype="multipart/form-data" class="form-group">
+    <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Proje Ekle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        
+        <input type="text" name="projectname" placeholder="Proje Adı" required class="form-control" maxlength="65" /><br />
+       
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+        <input type="submit" class="btn btn-primary" value="Ekle" />
+    </div>
+</form>
+

@@ -1,0 +1,145 @@
+﻿@model ArteDijital.Models.Entity.posttable
+@{
+    ViewBag.Title = Model.title;
+    ViewBag.Description = Model.description;
+    Layout = "~/Views/Shared/BlogView.cshtml";
+}
+
+    <section class="section blog-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-12 mb-5">
+                            <div class="single-blog-item">
+                                <h1 class="mb-4 text-md">@Model.title</h1>
+                                <a href="@Url.Action("KullaniciYazilari","Blog", new { id = Model.userid })">
+                                    <h6 style="color:orangered;">Yazar : @Model.usertable.usernick</h6></a>
+                                    <img src="@Model.photourl" alt="@Model.title" class="img-fluid" style="width:100%!important;"><br /><br />
+                                    <span class="mt-3">
+                                        <a href="@Url.Action("PostLike","Blog", new { id = Model.id })"><span class="text-black text-capitalize mr-3"><i class="icofont-simple-smile mr-2"></i>Beğendim</span></a>
+                                        <a href="@Url.Action("PostDislike","Blog", new { id = Model.id })"><span class="text-black text-capitalize mr-3"><i class="icofont-sad mr-2"></i>Beğenmedim</span></a>
+                                    </span>
+
+                                    <div class="blog-item-content mt-5">
+                                        <div class="blog-item-meta mb-3">
+
+                                            <span class="text-color-2 text-capitalize mr-3"><i class="icofont-book-mark mr-2"></i>@Model.category.categoryname</span>
+                                            <span class="text-muted text-capitalize mr-3"><i class="icofont-eye mr-2"></i>@Model.views</span>
+                                            <span class="text-muted text-capitalize mr-3"><i class="icofont-simple-smile mr-2"></i>@Model.postlike</span>
+                                            <span class="text-muted text-capitalize mr-3"><i class="icofont-sad mr-2"></i>@Model.postdislike</span>
+                                            <span class="text-black text-capitalize mr-3"><i class="icofont-calendar mr-2"></i> @Model.possttime.Value.ToString("dd.MM.yyyy")</span>
+                                            <br />
+
+                                        </div>
+                                        <p>@Model.spottext</p>
+                                        <div class="col-12">
+                                            @Html.Raw(Model.postcontent)
+                                        </div>
+
+
+                                        <div class="mt-5 clearfix">
+                                            <ul class="float-left list-inline tag-option">
+                                                <li class="list-inline-item"><a href="#">@Model.hashtags</a></li>
+                                            </ul>
+
+                                            @*<ul class="float-right list-inline">
+                    <li class="list-inline-item"> Paylaş: </li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="icofont-facebook" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="icofont-twitter" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="icofont-pinterest" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="icofont-linkedin" aria-hidden="true"></i></a></li>
+                </ul>*@
+                                        </div>
+                                    </div>
+</div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="comment-area mt-4 mb-5">
+                                <h4 class="mb-4">Yorumlar </h4>
+                                <ul class="comment-tree list-unstyled">
+                                    @foreach (var item in Model.comenttables)
+                                    {
+                                        <li class="mb-5">
+                                            <div class="comment-area-box">
+                                                <div class="comment-thumb float-left">
+                                                    <img alt="" src="@item.usertable.userphotourl" class="rounded" style="width:75px!important">
+                                                </div>
+
+                                                <div class="comment-info">
+                                                    <h5 class="mb-1">
+                                                        @item.title @if (Session["MySessionUser"] != null)
+                                                        {
+                                                            if (((ArteDijital.Models.Entity.usertable)Session["MySessionUser"]).userauthorityID == 1)
+                                                            {
+                                                                <a href="@Url.Action("CommentDelete", "Blog" , new {id = item.id})" onclick="return confirm('Bu Yorumu Silmek İstediğinize Emin Misiniz?')"><i class="icofont-ui-delete"></i></a>
+
+                                                            }
+                                                        }
+                                                    </h5>
+                                                    <span><b style="color:orangered;">@item.usertable.usernick</b></span> |
+                                                    <span class="date-comm"><span class="date-comm">@item.commenttime.Value.ToString("dd.MM.yyyy")</span></span>
+
+                                                </div>
+                                                <div class="comment-content mt-3">
+                                                    <p>@item.comentcontent</p>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    }
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        @if (Session["MySessionUser"] != null)
+                        {
+                            
+                            <div class="col-lg-12">
+                                <form class="comment-form my-5" id="comment-form" action="@Url.Action("Comment", "Blog")" method="post">
+                                    <input type="text" required="required" name="postid" value="@Model.id" readonly="readonly" style="visibility: hidden;">
+                                    <h4 class="mb-4">Yorum Yaz</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+
+                                                <input class="form-control" type="text" name="title" placeholder="Yorum Başlığı" maxlength="100">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <textarea class="form-control mb-4" name="comentcontent" id="comment" cols="30" rows="5" placeholder="Yorum"></textarea>
+
+                                    <input class="btn btn-main-2 btn-round-full" type="submit" name="submit-contact" id="submit_contact" value="Gönder">
+                                </form>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="col-lg-12">
+
+                                <h5 style="color:orangered;">Yorum Yapmak İçin Lütfen <a href="@Url.Action("GirisYap", "Blog")">Giriş</a> Yapınız.</h5>
+                            </div>
+                        }
+
+                    </div>
+                    </div>
+                <div class="col-lg-3">
+                    @{Html.RenderAction("SideBar", "Partial");}
+                </div>
+            </div>
+        </div>
+    </section>
+

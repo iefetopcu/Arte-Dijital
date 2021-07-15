@@ -1,0 +1,146 @@
+﻿@model ArteDijital.Models.Entity.posttable
+@{
+    ViewBag.Title = "YeniIcerikEkle";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<script src="https://cdn.ckeditor.com/4.15.1/full/ckeditor.js"></script>
+<div class="main-content-container container-fluid px-4">
+
+    <div class="page-header row no-gutters py-4">
+        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+            <span class="text-uppercase page-subtitle"></span>
+            <h3 class="page-title">Yeni İçerik Ekle</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-9 col-md-12">
+            <div class="card card-small mb-3">
+                <div class="card-body">
+                    <form class="add-new-post" method="post" enctype="multipart/form-data">
+                        <input class="form-control form-control-lg mb-3" type="text" placeholder="Post Başlığı - Max 65 Karakter" name="title" required maxlength="65">
+                        <input class="form-control form-control-lg mb-3" type="text" placeholder="SEO Açıklaması - Max 170 Karakter" name="description" required maxlength="170">
+                        <input class="form-control form-control-lg mb-3" type="text" placeholder="Hash Tagler - Virgül ile ayırırınız" name="hashtags" required maxlength="50">
+                        <input class="form-control form-control-lg mb-3" type="text" placeholder="Ön Görünüm Yazısı Max 170 karakter" name="spottext" required maxlength="170">
+                        <div class="add-new-post__editor mb-1">
+
+                            <textarea name="postcontent"></textarea><br /><br />
+                            <script>
+                                CKEDITOR.replace('postcontent');
+                            </script>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-12">
+            <div class='card card-small mb-3'>
+                <div class="card-header border-bottom">
+                    <h6 class="m-0">Detaylar ve Fotoğraf</h6>
+                </div>
+                <div class='card-body p-0'>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-3">
+
+
+
+                            <span class="d-flex mb-2">
+                                <i class="material-icons mr-1">border_color</i>
+                                <strong class="mr-1">Yazar </strong>
+
+
+                                @Html.DropDownListFor(m => m.userid, (List<SelectListItem>)ViewBag.usr, new { @class = "ml-auto" })
+                            </span>
+
+                            <span class="d-flex mb-2">
+                                <i class="material-icons mr-1">flag</i>
+                                <strong class="mr-1">Durum </strong>
+                                <select class="ml-auto" name="isaktif">
+                                    <option value="1">Aktif</option>
+                                    <option value="2">Pasif</option>
+                                </select>
+                            </span>
+                            <span class="d-flex mb-2">
+
+
+                                <strong class="ml-1">
+                                    <input type="file" name="photourl" required />
+                                </strong>
+                            </span>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class='card card-small mb-3'>
+                <div class="card-header border-bottom">
+                    <h6 class="m-0">Kategori</h6>
+                </div>
+                <div class='card-body p-0'>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-3">
+                            <span class="d-flex mb-2">
+                                <i class="material-icons mr-1">storage</i>
+                                <strong class="mr-1">Kategori </strong>
+                                @Html.DropDownListFor(m => m.categoryid, (List<SelectListItem>)ViewBag.cat, new { @class = "ml-auto" })
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='card card-small mb-3'>
+                <div class="card-header border-bottom">
+                    <h6 class="m-0">Tarih</h6>
+                </div>
+                <div class='card-body p-0'>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-3">
+
+
+                            <span class="d-flex mb-2">
+                                <i class="material-icons mr-1">calendar_today</i>
+                                <strong class="mr-1">Zaman </strong>
+                                <input type="text" id="datepicker" name="possttime" required="required" class="ml-auto"><br />
+                            </span>
+
+                        </li>
+                        <li class="list-group-item d-flex px-3">
+
+                            <button class="btn btn-sm btn-accent ml-auto">
+                                <i class="material-icons">file_copy</i> Yayınla
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var dateNow = new Date();
+
+            $("#datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+            }).datepicker('setDate', new Date());
+            ;
+        });
+    </script>
+</div>
+    @*<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var dateNow = new Date();
+
+            $("#datepicker").datepicker({
+                dateFormat: 'yy-mm-yy'
+            }).datepicker('setDate', new Date());
+            ;
+        });
+    </script>*@
+

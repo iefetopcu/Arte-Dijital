@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="artedijitalModelStoreContainer" CdmEntityContainer="artedijitalEntities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="artedijitalModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="menuid" ColumnName="menuid" />
+          <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comenttables">
+      <EntityTypeMapping TypeName="artedijitalModel.comenttable">
+        <MappingFragment StoreEntitySet="comenttable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="postid" ColumnName="postid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="comentcontent" ColumnName="comentcontent" />
+          <ScalarProperty Name="commenttime" ColumnName="commenttime" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="footermessages">
+      <EntityTypeMapping TypeName="artedijitalModel.footermessage">
+        <MappingFragment StoreEntitySet="footermessage">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="footerexplanation" ColumnName="footerexplanation" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+          <ScalarProperty Name="messagetime" ColumnName="messagetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FreelanceJobs">
+      <EntityTypeMapping TypeName="artedijitalModel.FreelanceJob">
+        <MappingFragment StoreEntitySet="FreelanceJob">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="jobname" ColumnName="jobname" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Freelancers">
+      <EntityTypeMapping TypeName="artedijitalModel.Freelancer">
+        <MappingFragment StoreEntitySet="Freelancer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="gsm" ColumnName="gsm" />
+          <ScalarProperty Name="websiteurl" ColumnName="websiteurl" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+          <ScalarProperty Name="jobexplanation" ColumnName="jobexplanation" />
+          <ScalarProperty Name="userphotourl" ColumnName="userphotourl" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="explanation" ColumnName="explanation" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menulers">
+      <EntityTypeMapping TypeName="artedijitalModel.menuler">
+        <MappingFragment StoreEntitySet="menuler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="menuname" ColumnName="menuname" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="posttables">
+      <EntityTypeMapping TypeName="artedijitalModel.posttable">
+        <MappingFragment StoreEntitySet="posttable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photourl" ColumnName="photourl" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="hashtags" ColumnName="hashtags" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="postcontent" ColumnName="postcontent" />
+          <ScalarProperty Name="spottext" ColumnName="spottext" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="postlike" ColumnName="postlike" />
+          <ScalarProperty Name="postdislike" ColumnName="postdislike" />
+          <ScalarProperty Name="possttime" ColumnName="possttime" />
+          <ScalarProperty Name="posturl" ColumnName="posturl" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="projectstatus">
+      <EntityTypeMapping TypeName="artedijitalModel.projectstatu">
+        <MappingFragment StoreEntitySet="projectstatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="projectstatusname" ColumnName="projectstatusname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTables">
+      <EntityTypeMapping TypeName="artedijitalModel.ProjectTable">
+        <MappingFragment StoreEntitySet="ProjectTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="projectname" ColumnName="projectname" />
+          <ScalarProperty Name="projectstatus" ColumnName="projectstatus" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="creatorid" ColumnName="creatorid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="responsibletables">
+      <EntityTypeMapping TypeName="artedijitalModel.responsibletable">
+        <MappingFragment StoreEntitySet="responsibletable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="taskid" ColumnName="taskid" />
+          <ScalarProperty Name="responsibleid" ColumnName="responsibleid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="artedijitalModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taskstatus">
+      <EntityTypeMapping TypeName="artedijitalModel.taskstatu">
+        <MappingFragment StoreEntitySet="taskstatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="taskstatusname" ColumnName="taskstatusname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskTables">
+      <EntityTypeMapping TypeName="artedijitalModel.TaskTable">
+        <MappingFragment StoreEntitySet="TaskTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="taskname" ColumnName="taskname" />
+          <ScalarProperty Name="taskexplanation" ColumnName="taskexplanation" />
+          <ScalarProperty Name="deadline" ColumnName="deadline" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="taskstatus" ColumnName="taskstatus" />
+          <ScalarProperty Name="creatorid" ColumnName="creatorid" />
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userroles">
+      <EntityTypeMapping TypeName="artedijitalModel.userrole">
+        <MappingFragment StoreEntitySet="userroles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userrolename" ColumnName="userrolename" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usertables">
+      <EntityTypeMapping TypeName="artedijitalModel.usertable">
+        <MappingFragment StoreEntitySet="usertable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="usersurname" ColumnName="usersurname" />
+          <ScalarProperty Name="useremail" ColumnName="useremail" />
+          <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+          <ScalarProperty Name="userphotourl" ColumnName="userphotourl" />
+          <ScalarProperty Name="usernick" ColumnName="usernick" />
+          <ScalarProperty Name="userauthorityID" ColumnName="userauthorityID" />
+          <ScalarProperty Name="isaktif" ColumnName="isaktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

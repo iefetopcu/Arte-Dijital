@@ -1,0 +1,33 @@
+﻿@using ArteDijital.Models.Entity
+
+<div class="sidebar-widget search  mb-3 ">
+    <h5>Burada Ara</h5>
+    <form action="@Url.Action("Search", "Blog")" class="search-form" methos="post">
+        <input type="text" class="form-control" placeholder="Ara..." name="search">
+        <i class="ti-search"></i>
+    </form>
+</div>
+<div class="sidebar-widget latest-post mb-3">
+    <h5>Kategoriler</h5>
+    <div>
+        <h6 class="my-2"><a href="@Url.Action("Guncel", "Blog")">Güncel</a></h6>
+        <h6 class="my-2"><a href="@Url.Action("Yazilim", "Blog")">Yazılım</a></h6>
+        <h6 class="my-2"><a href="@Url.Action("Donanim", "Blog")">Donanım</a></h6>
+        <h6 class="my-2"><a href="@Url.Action("Teknoloji", "Blog")">Teknoloji</a></h6>
+        <h6 class="my-2"><a href="@Url.Action("Oyun", "Blog")">Oyun</a></h6>
+    </div>
+</div>
+<div class="sidebar-widget latest-post mb-3">
+    <h5>Popüler Yazılar</h5>
+    @foreach (var sidebarposts in Model)
+    {
+<div class="py-2">
+    <h6 class="my-2"><a href="@Url.Action("BlogOku","Blog", new { posturl = sidebarposts.posturl })">@sidebarposts.title</a></h6>
+    <span class="text-sm text-muted">@sidebarposts.possttime.ToString("dd.MM.yyyy")</span> 
+    <span class="text-muted text-capitalize mr-3"><i class="icofont-eye mr-2"></i>@sidebarposts.views</span>
+    
+</div>
+
+    }
+</div>
+

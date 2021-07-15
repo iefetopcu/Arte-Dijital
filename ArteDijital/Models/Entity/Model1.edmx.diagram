@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="24dbf8626703490189bc52db1187c027" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="artedijitalModel.category" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.comenttable" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.footermessage" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.FreelanceJob" Width="1.5" PointX="10.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.Freelancer" Width="1.5" PointX="13" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.menuler" Width="1.5" PointX="3.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.posttable" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.projectstatu" Width="2.375" PointX="2.125" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.ProjectTable" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.responsibletable" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.sysdiagram" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.taskstatu" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.TaskTable" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.userrole" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.usertable" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="artedijitalModel.FK_category_menuler" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_posttable_category" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_comenttable_posttable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_comenttable_usertable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_Freelancer_FreelanceJob" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_posttable_usertable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_ProjectTable_projectstatus" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_ProjectTable_usertable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_TaskTable_ProjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_responsibletable_TaskTable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_TaskTable_taskstatus" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_TaskTable_usertable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_usertable_userroles1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

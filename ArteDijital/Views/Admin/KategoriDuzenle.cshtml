@@ -1,0 +1,27 @@
+﻿@model ArteDijital.Models.Entity.category
+@{
+    ViewBag.Title = "KategoriDuzenle";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>KategoriDuzenle</h2>
+
+
+
+@using (Html.BeginForm("KategoriDuzenle", "Admin", FormMethod.Post))
+
+{
+
+    @Html.TextBoxFor(m => m.id, new { @readonly = "readonly" })
+    <br />
+
+    @Html.TextBoxFor(m => m.categoryname, new { @class = "form-control" })
+    <br />
+
+    @Html.DropDownListFor(m => m.menuid, (List<SelectListItem>)ViewBag.menu, @Model.menuid)
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+}
+
+

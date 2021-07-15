@@ -1,0 +1,31 @@
+﻿@model ArteDijital.Models.Entity.category
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>YeniKategori</h2>
+<br />
+<form method="post" action="">
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Kategori Adı" aria-label="Username" aria-describedby="basic-addon1" name="categoryname">
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            @Html.DropDownListFor(m => m.menuid, (List<SelectListItem>)ViewBag.menu, new { @class = "form-control" })<br />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <input type="submit" value="Ekle" class="form-group" />
+        </div>
+    </div>
+</form>

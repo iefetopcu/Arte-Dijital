@@ -1,0 +1,42 @@
+﻿@using ArteDijital.Models.Entity
+@{
+    ViewBag.Title = "Freelancer";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Freelancer Adı</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">GSM</th>
+            <th scope="col">Kategorisi</th>
+            <th scope="col">Şehir</th>
+            <th scope="col">İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var freelancer in Model)
+        {
+
+        <tr>
+            <th scope="row">@freelancer.id</th>
+            <td>@freelancer.name @freelancer.surname</td>
+            <td>@freelancer.email</td>
+            <td>@freelancer.gsm</td>
+            <td>@freelancer.FreelanceJob.jobname</td>
+            <td>@freelancer.city</td>
+            <td>
+                <a href="@Url.Action("FreelancerSil", "Admin" , new { id = freelancer.id })"><button type="button" class="btn btn-danger">Sil</button></a>
+                <a href="@Url.Action("FreelancerGoster", "Admin" , new { id = freelancer.id })"><button type="button" class="btn btn-info">Görüntüle</button></a>
+            </td>
+        </tr>
+
+        }
+
+
+    </tbody>
+</table>
+<a href="@Url.Action("FreelancerExcel", "Admin")"><button type="button" class="btn btn-info">Excel'e Aktar</button></a>

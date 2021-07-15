@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Mesajlar";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+        <span class="text-uppercase page-subtitle">Mesajlar</span>
+        
+    </div>
+</div>
+<!-- End Page Header -->
+<!-- Small Stats Blocks -->
+<div class="row">
+    <div class="col-lg col-md-6 col-sm-6 mb-4">
+        <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex">
+                <div class="d-flex flex-column m-auto">
+                    <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Okunmamış Footer Mesajları</span>
+                        <h6 class="stats-small__value count my-3">@ViewBag.FooterOkunmamis</h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg col-md-6 col-sm-6 mb-4">
+        <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex">
+                <div class="d-flex flex-column m-auto">
+                    <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Okunmuş Footer Mesajları</span>
+                        <h6 class="stats-small__value count my-3">@ViewBag.FooterOkunmus</h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg col-md-6 col-sm-6 mb-4">
+        <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex">
+                <div class="d-flex flex-column m-auto">
+                    <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Okunmamış Hizmet Mesajları</span>
+                        <h6 class="stats-small__value count my-3">@ViewBag.HizmetOkunmamis</h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg col-md-6 col-sm-6 mb-4">
+        <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex">
+                <div class="d-flex flex-column m-auto">
+                    <div class="stats-small__data text-center">
+                        <span class="stats-small__label text-uppercase">Okunmuş Hizmet Mesajları</span>
+                        <h6 class="stats-small__value count my-3">@ViewBag.HizmetOkunmus</h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    
+        <div class="col mb-4">
+            <a href="@Url.Action("FooterMesaj", "Admin")">
+                <div class="bg-info rounded text-white text-center p-3" style="box-shadow: inset 0 0 5px rgba(0,0,0,.2);">FOOTER MESAJLARI</div>
+            </a>
+        </div>
+    
+    
+        <div class="col mb-4">
+            <a href="@Url.Action("HizmetMesaj", "Admin")">
+                <div class="bg-danger rounded text-white text-center p-3" style="box-shadow: inset 0 0 5px rgba(0,0,0,.2);">HİZMET MESAJLARI</div>
+            </a>
+        </div>
+    
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="41a875a6d809459cbef61dcaf2a553f4" Name="Diagram1">
+        <EntityTypeShape EntityType="artedijitalModel.category" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.comenttable" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.footermessage" Width="1.5" PointX="5.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.FreelanceJob" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.Freelancer" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.menuler" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.Msgservicerequest" Width="1.5" PointX="7.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.posttable" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.sysdiagram" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.userrole" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="artedijitalModel.usertable" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="artedijitalModel.FK_category_menuler" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_posttable_category" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_comenttable_posttable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_comenttable_usertable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_Freelancer_FreelanceJob" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_posttable_usertable" ManuallyRouted="false" />
+        <AssociationConnector Association="artedijitalModel.FK_usertable_userroles1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

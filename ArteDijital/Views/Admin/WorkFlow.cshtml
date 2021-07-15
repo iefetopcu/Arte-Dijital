@@ -1,0 +1,100 @@
+﻿@using ArteDijital.Models.Entity
+@{
+    ViewBag.Title = "WorkFlow";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+<div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+        <span class="text-uppercase page-subtitle">Projeler</span>
+
+    </div>
+</div>
+<div class="row mt-3">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Yeni Proje Ekle
+    </button>
+</div>
+<div class="row mt-3">
+
+    @foreach (var project in Model)
+    {
+        <div class="col-lg col-md-6 col-sm-6 mb-4">
+            <div class="stats-small stats-small--1 card card-small">
+                <div class="card-body p-0 d-flex">
+                    <div class="d-flex flex-column m-auto">
+                        <div class="stats-small__data text-center">
+                            <span class="stats-small__label text-uppercase">Oluşturan : @project.usertable.username @project.usertable.usersurname</span>
+                            <h6 class="stats-small__value count my-3">Proje İsmi :<a href="@Url.Action("TaskList", "Admin" , new { id = project.id })">@project.projectname</a>  </h6>
+                            @if (project.projectstatu.projectstatusname == "Planlanan Proje")
+                            {
+                                <h6 class="stats-small__value count my-3" style="color:darkred; font-size:15px;">
+                                    @project.projectstatu.projectstatusname
+                                </h6>
+                            }
+                            @if (project.projectstatu.projectstatusname == "Devam Eden Proje")
+                            {
+                                <h6 class="stats-small__value count my-3" style="color:darkorange; font-size:15px;">
+                                    @project.projectstatu.projectstatusname
+                                </h6>
+                            }
+                            @if (project.projectstatu.projectstatusname == "Tamamlanmış Proje")
+                            {
+                                <h6 class="stats-small__value count my-3" style="color:darkgreen; font-size:15px;">
+                                    @project.projectstatu.projectstatusname
+                                </h6>
+                            }
+                            @if (project.projectstatu.projectstatusname == "Onaylanmış Proje")
+                            {
+                                <h6 class="stats-small__value count my-3" style="color:green; font-size:15px;">
+                                    @project.projectstatu.projectstatusname
+                                </h6>
+                            }
+                            <div class="row" style="padding-bottom:10px;">
+                                <div class="col-lg-6">
+                                    @if (project.projectstatu.projectstatusname != "Planlanan Proje")
+                                    {
+                                        <a href="@Url.Action("ProjectBack", "Admin" , new { id = project.id })"><button class="btn btn-danger">Bir Önceki Aşama</button></a>
+                                    }
+
+                                </div>
+                                <div class="col-lg-6">
+                                    @if (project.projectstatu.projectstatusname != "Onaylanmış Proje")
+                                    {
+                                        <a href="@Url.Action("ProjectNext", "Admin" , new { id = project.id })">
+                                            <button class="btn btn-primary">Bir Sonraki Aşama</button>
+                                        </a>
+                                    }
+
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <a href="@Url.Action("ProjectDelete", "Admin" , new { id = project.id })" onclick="return confirm('Bu Projeyi Silerseniz proje ile beraber içerisindeki bütün görevler silinecektir. Silmek İstediğinize Emin Misiniz?')">Projeyi Sil</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            @{Html.RenderAction("ProjectForm", "AdminPartial");}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+﻿
+<div class="card card-small mb-4">
+    <div class="card-header border-bottom">
+        <h6 class="m-0">İletişime Geç</h6>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item p-3">
+            <div class="row">
+                <div class="col">
+                    <form method="post" action="@Url.Action("ServiceRequest", "Partial")">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="feFirstName">İsim</label>
+                                <input type="text" class="form-control" id="feFirstName" placeholder="İsim" name="name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="feLastName">Soyisim</label>
+                                <input type="text" class="form-control" id="feLastName" placeholder="Soyisim" name="surname">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="feEmailAddress">Email - GSM</label>
+                                <input type="email" class="form-control" id="feEmailAddress" placeholder="Email" name="email" required>
+                                <input type="text" class="form-control" id="feEmailAddress" placeholder="GSM" name="gsm">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="feInputState">Konu</label>
+                                <select class="form-control" name="subject">
+                                    <option value="Yazılım">Yazılım</option>
+                                    <option value="Yapay Zeka">Yapay Zeka</option>
+                                    <option value="Veri Analitiği">Veri Analitiği</option>
+                                    <option value="E-Ticaret">E-Ticaret</option>
+                                    <option value="Web Sitesi">Web Sitesi</option>
+                                    <option value="Dijital Pazarlama">Dijital Pazarlama</option>
+                                    <option value="Sistem & Yazıcı Desteği">Sistem & Yazıcı Desteği</option>
+                                    <option value="Network & Sunucu Kurulumları">Network & Sunucu Kurulumları</option>
+                                    <option value="Grafik Tasarım">Grafik Tasarım</option>
+                                    <option value="Fotoğraf Çekimi">Fotoğraf Çekimi</option>
+                                    <option value="Video Çekimi">Video Çekimi</option>
+                                    <option value="Çeviri">Çeviri</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="feInputAddress">Konu Başlığı</label>
+                            <input type="text" class="form-control" id="feInputAddress" placeholder="Başlık" name="title" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="feDescription">İçerik</label>
+                                <textarea class="form-control" name="explanation" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-accent">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+

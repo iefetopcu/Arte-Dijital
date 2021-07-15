@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Ceviri ve Tercüme Hizmetleri";
+    ViewBag.Description = "Arte Dijital Çeviri Hizmetleri , İngilizce , İspanyolca , Fransızca, Almanca, Arapça";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>ÇEVİRİ & TERCÜME</h2>
+
+                    <span>
+                        Günümüz küreselleşen ekonomisinde şahsi ve kurumsal temsilimizin de uluslararası olması için farklı dillere ve dillerden birçok alanda çeviriye ve tercümeye ihtiyaç duymaktayız.
+
+                    </span>
+                    <br />
+                    <span>
+                        Şahsi veya kurumsal web sitenizden ticari evraklarınıza, online ve offline simultane tercümeden edebi ve teknik belge çevirilerinize kadar bütün çeviri ve tercüme ihtiyaçlarınızda 
+                        ile çalışarak deneyimli kadromuzdan yararlanabilir, geniş hizmet yelpazemizden istifade edebilirsiniz.
+                    </span>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/edebitercume.gif" alt="edebi tercüme"/>
+                </figure>
+
+
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Edebi Tercüme</h1>
+                <p id="edebisubsting">Arte Dijital olarak edebi metinlerinizin tercümesini kaynak ve hedef dillere tamamen hâkim, kültürlerini detaylarıyla bilen uzman tercümanlarımız ile yapmaktayız. İnanıyoruz ki kültürü tanımadan, edebiyatına hâkim olmadan bir dilden diğerine edebi metin tercümesi yapmak mümkün değildir. Siz de tercümesini istediğiniz edebi metnin profesyonel bir şekilde ve kaynak esere sadık kalınarak çevrilmesini tercih ediyorsanız hemen bizimle iletişime geçin!</p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+
+                <div>
+                    <a href="@Url.Action("EdebiTercume", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Simultane Çeviri</h1>
+                <p>Simultane çeviri, uluslararası Konferans, Kongre, Sempozyum, Seminer gibi etkinliklerde veya diplomatik toplantılar, görüşmeler, televizyon ve internet üzerinden yayınlar ile dinleyicilerin uluslararası bir kitleye sahip olduğu alanlarda uzman tercümanın konuşmacı ile eş zamanlı olarak, yaptığı konuşmayı farklı bir dile tercümesine denir. </p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/simultaneceviri.gif" alt="simultane çeviri gif" />
+                </figure>
+                <div>
+                    <a href="@Url.Action("SimultaneCeviri", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/tekniktercume.gif" alt="teknik çeviri gif"/>
+                </figure>
+
+
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Teknik Tercüme</h1>
+                <p> Genel anlamıyla mühendislik alanlarında ve teknik terimlerin bol kullanıldığı alanlarda yapılan çevirilere teknik çeviri denir. Teknik çeviri sıradan bir çeviriden daha fazla özveri gerektirir çünkü genel anlamın aktarılması yanında detayda kullanılan terim ve tabirlerin de doğru karşılıklarının kullanılması gerekmektedir, aksi takdirde çevride anlam kaybı yaşanır.</p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+                <div>
+                    <a href="@Url.Action("TeknikTercume", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Ticari Tercüme</h1>
+                <p>Ticari çeviriler, uluslararası şirketlerin farklı ülkelerden şirketler ve devlet kurumları veya şirket içinde farklı ülkelerden çalışanlar arasında bilanço, faaliyet, alım-satım işlemi gibi raporların, fatura vb. muhasebe evraklarının, ticari yazışmaların çevirisini belirtir. </p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/ticaritercume.gif" alt="ticari tercüme gif"/>
+                </figure>
+
+                <div>
+                    <a href="@Url.Action("TicariTercume", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <figure>
+                    <img src="~/images/websitecevirisi.gif" alt="web sitesi çeviri"/>
+                </figure>
+
+
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="mt-3">Web Sitesi Çeviri</h1>
+                <p>
+                    Günümüz internet çağında web sitesi kurumsal ve şahsi kimliğinizin en önemli temsillerinden biri olmuştur. Bu temsilin de olabildiğince geniş bir kitleye yansıtılması birçok iş insanı tarafından önem görmektedir.
+                </p>
+                <br />
+                <p>
+                    Çalışmak istediğiniz uluslararası firmanın şahsi web siteniz üzerinden sizi tanıması, yeni kurduğunuz veya dijital ortama yeni geçirdiğiniz uluslararası şirketinizin yurt dışından potansiyel müşterilerinizi bilgilendirmesi ve onların dikkatini çekmesi gibi birçok sebeple web sitenizi birden çok dilde sunmanız rakiplerinize karşı sizi bir adım öne çıkaracaktır.
+                </p>
+                <br />
+                <p>
+                    Siz de uluslararası bir kitleye hitap ediyor veya etmeyi planlıyorsanız web sitenizin de hitap ettiğiniz kitlelerin diline çevrilmesi birinci önceliktir. Lakin bazı web tarayıcıları ve eklentiler otomatik online çeviri hizmetleri ile bulunduğunuz sitelerin çevirisini yapabilse de çoğu zaman bilgi kaybı ve hatalar ciddi boyutları bulmaktadır.
+                </p>
+                <p style="color:crimson">Detaylar ve teklif almak için Detayları Gör'e tıklayınız.</p>
+
+                <div>
+                    <a href="@Url.Action("WebSitesiCeviri", "Home")" class="btn btn-info text-white pull-right mt-2">Detayları Gör</a>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>

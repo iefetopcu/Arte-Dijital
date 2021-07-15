@@ -1,0 +1,286 @@
+﻿
+@{
+    ViewBag.Title = "Türkiyenin Dijital Ajansı";
+    ViewBag.Description = "Arte dijital'de yazılım, web tasarım, dijital pazarlama, network, grafik tasarım ve çeviri hizmetleri bulabilirsiniz.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<style>
+    section {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        background-color: #f1f4fa;
+    }
+
+    .wrap {
+        display: flex;
+        background: white;
+        padding: 1rem 1rem 1rem 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+        .wrap:hover {
+            background: linear-gradient(135deg,#6394ff 0%,#0a193b 100%);
+            color: white;
+        }
+
+    .ico-wrap {
+        margin: auto;
+    }
+
+    .mbr-iconfont {
+        font-size: 4.5rem !important;
+        color: #313131;
+        margin: 1rem;
+        padding-right: 1rem;
+    }
+
+    .vcenter {
+        margin: auto;
+    }
+
+    .mbr-section-title3 {
+        text-align: left;
+    }
+
+    h2 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .display-5 {
+        font-family: 'Source Sans Pro',sans-serif;
+        font-size: 1.4rem;
+    }
+
+    .mbr-bold {
+        font-weight: 700;
+    }
+
+    p {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        line-height: 25px;
+    }
+
+    .display-6 {
+        font-family: 'Source Sans Pro',sans-serif;
+        font-size: 1rem
+    }
+</style>
+
+
+<div class="London">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>ARTE DİJİTAL</h2>
+                    <span>
+                        Sahip olduğumuz sektörel birikimi yaratıcılığımızla birleştirerek hizmetinize sunuyoruz.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="container">
+            <div class="London-img">
+                <figure><img src="~/images/banner.png" alt="img" /></figure>
+            </div>
+        </div>*@
+</div>
+<section>
+    <div class="container">
+
+
+        <div class="row mbr-justify-content-center">
+
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("YazilimCozumleri", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-desktop" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Yazılım <span>Çözümleri</span></h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("WebCozumleri", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-globe" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">
+                                Web
+                                <span> Çözümleri</span>
+                            </h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("NetworkCozumleri", "Home")">
+
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-server" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">
+                                Network
+                                <span>Çözümleri</span>
+                            </h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("GrafikTasarim", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-paint-brush" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Grafik <span>Tasarım</span></h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("FotografVideo", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-video-camera" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Fotoğraf & <span>Video</span></h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("Ceviri", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-language" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Çeviri & <span>Tercüme</span></h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="blog" class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>BİZİMLE ÇALIŞ</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xl-6 col-lg64 col-md6 col-sm-12">
+                <div class="blog-box">
+                    <h3>Freelancer Ol</h3>
+                    <p>
+                        Arte dijital freelancer çalışanlara önem göstermektedir, yoğunluğumuzda ilk iletişime geçeceğimiz siz olun! Hemen Freelancer ol kısmından bilgileri doldur ve büyüen arte ekibine katıl!
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg64 col-md6 col-sm-12">
+
+
+                <h3>İş Ortağımız Ol</h3>
+                <p>
+                    Projelerinize yetişemiyor, yeni fikirler üretiyor ama vakit bulamıyor musunuz? Arte dijital iş ortaklarının hayallerini gerçekleştirmesine yardımcı oluyor.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <br />
+</div>
+
+<section>
+    <div class="container">
+
+
+        <div class="row mbr-justify-content-center">
+
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("FreelancerOl", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-keyboard-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Freelancer <span>Ol</span></h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <a href="@Url.Action("iletisim", "Home")">
+                    <div class="wrap">
+                        <div class="ico-wrap">
+                            <i class="mbr-iconfont fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-wrap vcenter">
+                            <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">
+                                İletişim
+                                <span></span>
+                            </h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div id="blog" class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Arte Blog</h2>
+                    <span>Arte Blog üzerinden takip edebilirsiniz.</span>
+                </div>
+            </div>
+        </div>
+        @{Html.RenderAction("IndexBlogposts", "Partial");}
+    </div>
+</div>
+

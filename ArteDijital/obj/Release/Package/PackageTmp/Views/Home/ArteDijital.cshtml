@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "Arte Dijital Kimdir?";
+    ViewBag.Description = "Arte Dijital freelance çalışma sistemi ile çalışan bir dijital ajanstır.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <style>
+        section {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            background-color: #f1f4fa;
+        }
+
+        .wrap {
+            display: flex;
+            background: white;
+            padding: 1rem 1rem 1rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+            .wrap:hover {
+                background: linear-gradient(135deg,#6394ff 0%,#0a193b 100%);
+                color: white;
+            }
+
+        .ico-wrap {
+            margin: auto;
+        }
+
+        .mbr-iconfont {
+            font-size: 4.5rem !important;
+            color: #313131;
+            margin: 1rem;
+            padding-right: 1rem;
+        }
+
+        .vcenter {
+            margin: auto;
+        }
+
+        .mbr-section-title3 {
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .display-5 {
+            font-family: 'Source Sans Pro',sans-serif;
+            font-size: 1.4rem;
+        }
+
+        .mbr-bold {
+            font-weight: 700;
+        }
+
+        p {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            line-height: 25px;
+        }
+
+        .display-6 {
+            font-family: 'Source Sans Pro',sans-serif;
+            font-size: 1rem
+        }
+    </style>
+    <section>
+        <div class="container">
+
+
+            <div class="row mbr-justify-content-center">
+
+                <div class="col-lg-6 mbr-col-md-10">
+                    <a href="@Url.Action("Projelerimiz", "Home")">
+                        <div class="wrap">
+                            <div class="ico-wrap">
+                                <i class="mbr-iconfont fa fa-folder" aria-hidden="true"></i>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Projelerimiz <span></span></h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mbr-col-md-10">
+                    <a href="@Url.Action("Referanslarimiz", "Home")">
+                        <div class="wrap">
+                            <div class="ico-wrap">
+                                <i class="mbr-iconfont fa fa-map-signs" aria-hidden="true"></i>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">
+                                    Referanslarımız
+                                    <span></span>
+                                </h2>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mbr-col-md-10">
+                    <a href="@Url.Action("Amacimiz", "Home")">
+
+                        <div class="wrap">
+                            <div class="ico-wrap">
+                                <i class="mbr-iconfont fa fa-bullseye" aria-hidden="true"></i>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">
+                                    Amacımız
+                                    <span></span>
+                                </h2>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mbr-col-md-10">
+                    <a href="@Url.Action("isortaklarimiz", "Home")">
+                        <div class="wrap">
+                            <div class="ico-wrap">
+                                <i class="mbr-iconfont fa fa-handshake-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">İş Ortaklarımız<span></span></h2>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </section>

@@ -1,0 +1,92 @@
+﻿@using ArteDijital.Models.Entity
+@{
+    ViewBag.Title = "TaskList";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+<div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+        <span class="text-uppercase page-subtitle">@ViewBag.projectname Projesi Görevleri </span>
+
+    </div>
+</div>
+<div class="row mt-3">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Yeni Görev Ekle
+    </button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th scope="col">Görev Adı</th>
+            @*<th scope="col">Sorumlusu</th>*@
+
+            <th scope="col">Deadline</th>
+            <th scope="col">Task Durumu</th>
+            <th>Durum Değiştir</th>
+            <th scope="col">İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tasklist in Model)
+        {
+        <tr>
+
+            <td>@tasklist.taskname</td>
+            <td>@tasklist.deadline</td>
+            @if (tasklist.taskstatu.taskstatusname == "Planlanan Görev")
+            {
+                <td style="color:darkred">@tasklist.taskstatu.taskstatusname</td>
+            }
+            @if (tasklist.taskstatu.taskstatusname == "Devam Eden Görev")
+            {
+                <td style="color:darkorange">@tasklist.taskstatu.taskstatusname</td>
+            }
+            @if (tasklist.taskstatu.taskstatusname == "Tamamlanmış Görev")
+            {
+                <td style="color:darkgreen">@tasklist.taskstatu.taskstatusname</td>
+            }
+            @if (tasklist.taskstatu.taskstatusname == "Onaylanmış Görev")
+            {
+                <td style="color:green">@tasklist.taskstatu.taskstatusname</td>
+            }
+
+
+            <td>
+                @if (tasklist.taskstatu.taskstatusname != "Planlanan Görev")
+                {
+                    <a href="@Url.Action("TaskBack", "Admin" , new { id = tasklist.id })"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+                }
+
+                @if (tasklist.taskstatu.taskstatusname != "Onaylanmış Görev")
+                {
+                    <a href="@Url.Action("TaskNext", "Admin" , new { id = tasklist.id })"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                }
+
+
+            </td>
+            <td>
+
+                <a href="@Url.Action("TaskShow", "Admin" , new { id = tasklist.id })">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+                <a href="@Url.Action("TaskUpdate", "Admin" , new { id = tasklist.id })">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                </a>
+                <a href="@Url.Action("TaskDelete", "Admin" , new { id = tasklist.id })">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+
+        }
+
+
+    </tbody>
+</table>

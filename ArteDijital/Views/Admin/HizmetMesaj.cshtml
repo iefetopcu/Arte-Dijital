@@ -1,0 +1,105 @@
+﻿@using ArteDijital.Models.Entity
+@{
+    ViewBag.Title = "HizmetMesaj";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+        <span class="text-uppercase page-subtitle">Hizmet Mesajları</span>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card card-small blog-comments">
+            <div class="card-header border-bottom">
+                <h6 class="m-0">Okunmamış</h6>
+            </div>
+            <div class="card-body p-0">
+                @foreach (var msjlr in Model)
+                {
+                    if (msjlr.isaktif == 1)
+                    {
+                        <div class="blog-comments__item d-flex p-3">
+                            <div class="blog-comments__content">
+                                <div class="blog-comments__meta text-muted">
+                                    <a class="text-secondary" href="#">@msjlr.title</a><br />
+
+                                </div>
+                                <p class="m-0 my-1 mb-2 text-muted">@msjlr.explanation</p>
+                                
+                                <div class="blog-comments__actions">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="@Url.Action("HizmetMesajSil", "Admin" , new { id = msjlr.id })">
+                                            <button type="button" class="btn btn-white">
+                                                <span class="text-danger">
+                                                    <i class="material-icons">clear</i>
+                                                </span> Sil
+                                            </button>
+                                        </a>
+                                        <a href="@Url.Action("HizmetMesajOku", "Admin" , new { id = msjlr.id })">
+                                            <button type="button" class="btn btn-white">
+                                                <span class="text-light">
+                                                    <i class="material-icons">more_vert</i>
+                                                </span> Oku
+                                            </button>
+                                        </a>
+                                        <span class="text-muted" style="margin-left:10px;"> @msjlr.name @msjlr.surname - @msjlr.email</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <div class="card card-small blog-comments">
+            <div class="card-header border-bottom">
+                <h6 class="m-0">Okunmuş</h6>
+            </div>
+            <div class="card-body p-0">
+                @foreach (var msjlr in Model)
+                {
+                    if (msjlr.isaktif == 2)
+                    {
+                <div class="blog-comments__item d-flex p-3">
+                    <div class="blog-comments__content">
+                        <div class="blog-comments__meta text-muted">
+                            <a class="text-secondary" href="#">@msjlr.title</a><br />
+
+                        </div>
+                        <p class="m-0 my-1 mb-2 text-muted">@msjlr.explanation</p>
+
+                        <div class="blog-comments__actions">
+                            <div class="btn-group btn-group-sm">
+                                <a href="@Url.Action("HizmetMesajSil", "Admin" , new { id = msjlr.id })" onclick="return confirm('Bu Mesajı Silmek İstediğinize Emin Misiniz?')">
+                                    <button type="button" class="btn btn-white">
+                                        <span class="text-danger">
+                                            <i class="material-icons">clear</i>
+                                        </span> Sil
+                                    </button>
+                                </a>
+                                <a href="@Url.Action("HizmetMesajOku", "Admin" , new { id = msjlr.id })">
+                                    <button type="button" class="btn btn-white">
+                                        <span class="text-light">
+                                            <i class="material-icons">more_vert</i>
+                                        </span> Oku
+                                    </button>
+                                </a>
+                                <span class="text-muted" style="margin-left:10px;"> @msjlr.name @msjlr.surname - @msjlr.email</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

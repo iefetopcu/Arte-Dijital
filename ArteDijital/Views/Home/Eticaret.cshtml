@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "E-ticaret Sitesi";
+    ViewBag.Description = "En iyi E-ticaret sitesi ve İnternetten Satış Yapmak İçin Arte Dijital";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+
+                    <span>
+                        <img src="~/images/eticaretsitesi.png" alt="e ticaret sitesi arte dijital" style="width:100%!important;" />
+                    </span>
+                    <br />
+                    <p>
+                        E-ticaret insanların belirli sistemler üzerinden ürün veya hizmet alması ve bunun ödemesini site üzerinden online olarak gerçekleştirilmesidir.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    En İyi E-Ticaret Sitesi
+                </h1>
+
+                <p>En iyi e-ticaret sitesi hızlı, güvenli ve anlaşılabilir olmalıdır! Arte dijital e-ticaret site çalışmalarında size bu imkanları sağlayarak kullanıcının memnuniyeti ve maksimum müşteri kapasitesine ulaşması için markanızı destekler.</p>
+
+                <br />
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    İnternetten Satış Yapmak
+                </h1>
+
+                <p>İnternetten satış yapmak her bireyin hayalidir! Artık internetten satış yapmak Arte Dijital sayesinde çok kolay. Gerek shopier gibi entegrasyonları kullanarak, gerekse anlaşmalı banka poslarıyla size en uygun satış biçimi belirliyoruz. Müşterilerimiz kazandıkça biz mutlu oluyoruz...</p>
+                
+                <br />
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    E-Ticaret Sitesi Fiyatlandırma
+                </h1>
+                <p>Profesyonel ekibimiz tarafından verilen bütün hizmetlerle ilgili bizimle iletişime geçerek fiyat öğrenebilirsiniz.</p>
+
+                @{Html.RenderAction("hizmetiletisim", "Partial");}
+
+            </div>
+        </div>
+    </div>
+

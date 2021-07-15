@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Blog Sitesi";
+    ViewBag.Description = "İnternet Bloğu Kurmak ve Wordpress Blog oluşturmak artık çok kolay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+
+                    <span>
+                        <img src="~/images/blogsitesi.png" alt="blog sitesi" style="width:100%!important;" />
+                    </span>
+                    <br />
+                    <p>
+                        Blog sitesi fikirlerinizi ve görüşleriniz paylaşabileceğiniz, takipçi kitlesi oluşturabileceğiniz, belki de gezdiğiniz yerleri sergileyebileceğiniz site tipleridir! Sende blogger olmak için bizimle irtibata geçebilirsin.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    İnternet Bloğu Kurmak
+                </h1>
+
+                <p>İnternet bloğu kurmak artık çok basit. Gezi yazılarınızı, edebi metinlerinizi, görüş, öneri, inceleme gibi dilediğiniz alanda paylaşım yapabilmeniz için bloglar oluşturuyoruz. Rakiplerini analiz ederek rekabet içinde olduğunuz web sitelerinde daha üst sıralarda çıkmanızı sağlıyoruz. Sizin ihtiyacınıza göre en iyi bloğu oluşturmak bizim görevimiz.</p>
+
+                <br />
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Wordpress Blog
+                </h1>
+
+                <p>Günümüz en yaygın hazır sitelerinden olan wordpress konusunda desteğe ihtiyacınız mı var ? Gelin Arte Dijital uzman web masterları tarafından destek alın. Seo uyumlu ve ilgi çekici Wordpress bloglarıyla içeriğinizi geliştirip bloğunuzu zengin bir görünüme kavuşturalım!</p>
+
+                <br />
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Blog Sitesi Fiyatlandırma
+                </h1>
+                <p>Profesyonel ekibimiz tarafından verilen bütün hizmetlerle ilgili bizimle iletişime geçerek fiyat öğrenebilirsiniz.</p>
+
+                @{Html.RenderAction("hizmetiletisim", "Partial");}
+
+            </div>
+        </div>
+    </div>
+

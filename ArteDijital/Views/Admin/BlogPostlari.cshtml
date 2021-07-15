@@ -1,0 +1,35 @@
+﻿@using ArteDijital.Models.Entity
+
+@{
+    ViewBag.Title = "BlogPostlari";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>BlogPostlari</h2>
+<div class="row">
+
+    @foreach (var postlar in Model)
+    {
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div class="card card-small card-post card-post--1">
+                <div class="card-post__image" style="background-image: url('@postlar.photourl');">
+                    <a href="@Url.Action("BlogSil", "Admin" , new { id = postlar.id })" onclick="return confirm('Bu Postu Silmek İstediğinize Emin Misiniz?')"><i class="material-icons badge badge-pill badge-secondary" style="color:white; padding:10px;">X</i></a>
+                    <p class="card-post__category badge badge-pill badge-dark">@postlar.category.categoryname </p>
+                    <div class="card-post__author d-flex">
+                        <a href="#" class="card-post__author-avatar card-post__author-avatar--small" style="background-image: url('@postlar.usertable.userphotourl')"></a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a class="text-fiord-blue" href="@Url.Action("BlogGuncelle", "Admin" , new { id = postlar.id })">@postlar.title</a>
+                    </h5>
+                    <span class="text-muted">@postlar.possttime.ToString("dd.MM.yyyy")</span>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+
+</div>

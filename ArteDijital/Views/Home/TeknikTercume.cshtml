@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Teknik Tercüme";
+    ViewBag.Description = " Teknik Tercüme - İngilizce, İspanyolca, Almanca, Fransızca, Arapça";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="titlepage">
+
+                <span>
+                    <img src="~/images/tekniktercume.png" alt="Teknik Tercüme" style="width:100%!important;" />
+                </span>
+                <br />
+                <p>Genel anlamıyla mühendislik alanlarında ve teknik terimlerin bol kullanıldığı alanlarda yapılan çevirilere teknik çeviri denir. Teknik çeviri sıradan bir çeviriden daha fazla özveri gerektirir çünkü genel anlamın aktarılması yanında detayda kullanılan terim ve tabirlerin de doğru karşılıklarının kullanılması gerekmektedir, aksi takdirde çevride anlam kaybı yaşanır.</p>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row bg-light mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+            <h1 class="mt-3">
+            ’de Teknik Çeviri</h1>
+            <p>
+                Arte Dijital olarak teknik analiz, kullanım kılavuzu, teknik servis belgesi, bilişim sektöründe kullanılan her tür metin, teknik rapor gibi birçok metnin çevirisini yapmaktayız. Uzman, mükemmeliyetçi ve alanına hâkim tercümanlar tarafından metni bilgi kaybına uğratmadan çevirileri gerçekleştirmekteyiz.
+            </p>
+            <br />
+        </div>
+    </div>
+
+    <div class="row bg-light mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+            <h1 class="mt-3">Teknik Tercüme Yaptığımız Diller</h1>
+            <table width="100%">
+                <tr>
+                    <td><h6 class="text-info"><b>İngilizce</b></h6></td>
+                    <td><h6 class="text-info"><b>Almanca</b></h6></td>
+                    <td><h6 class="text-info"><b>İspanyolca</b></h6></td>
+                    <td><h6 class="text-info"><b>Fransızca</b></h6></td>
+                    <td><h6 class="text-info"><b>Arapça</b></h6></td>
+                </tr>
+            </table>
+            <br />
+        </div>
+    </div>
+
+    <div class="row bg-light mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+            <h1 class="mt-3">Teknik Tercümede Fiyatlandırma</h1>
+            <p>Profesyonel ekibimiz tarafından verilen bütün hizmetlerle ilgili bizimle iletişime geçerek fiyat öğrenebilirsiniz.</p>
+
+            @{Html.RenderAction("hizmetiletisim", "Partial");}
+
+        </div>
+    </div>
+</div>

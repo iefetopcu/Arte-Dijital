@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Teknoloji Bloğu - Arte Blog";
+    ViewBag.Description = "Bütün teknoloji yeniliklerinin bulunduğu blog arte blog";
+    Layout = "~/Views/Shared/BlogView.cshtml";
+}
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="row">
+                @{Html.RenderAction("BlogIndexposts", "Partial");}
+
+            </div>
+            
+        </div>
+
+        <div class="col-lg-3">
+            @{Html.RenderAction("SideBar", "Partial");}
+        </div>
+
+        
+    </div>
+    
+

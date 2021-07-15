@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Veri Analitiği";
+    ViewBag.Description = " Veri analizi, Veri yedekleme, Fazla verilerden kurtulma";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="titlepage">
+
+                    <span>
+                        <img src="~/images/verianalitigi.png" alt="Veri Analizi" style="width:100%!important;" />
+                    </span>
+                    <br />
+                    <p>
+                        Veri analitiği,  ham verileri analiz ederek sonuç çıkartma  bilimidir. Veri analitiği tekniklerinin ve süreçlerinin çoğu, insan tüketimi için ham veriler üzerinde çalışan mekanik süreçlere ve algoritmalara otomatikleştirilmiştir.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Veri Yönetimi
+
+                </h1>
+                <p>
+                    Verilerinizi nasıl yöneteceğiniz konusunda problem yaşıyorsanız, verileriniz katlanarak büyümeye devam ediyor ve istediğiniz veriyi bulma konusunda problem yaşıyorsanız Arte Dijital ile bu soruna çözüm bulabilirsiniz.
+                </p>
+
+                <br />
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Verilerinizi Yönetin
+                </h1>
+                <p>
+                    Arte dijital profesyonel ekibi ile verilerinizi yöneterek veri kayıplarınızı azaltabilir ve daha fazla veriye erişebilirsiniz.
+                </p>
+
+
+                <br />
+
+            </div>
+        </div>
+
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Fazla Veriden Kurtulma
+
+                </h1>
+                <p>
+                    Datalarınızda çok fazla veri olduğunu mu düşünüyorsunuz ? O zaman gelin Arte dijital profesyonel ekibi ile verilerinizi işleme konusunda size yardımcı olalım!
+                </p>
+
+
+                <br />
+
+            </div>
+        </div>
+        
+        <div class="row bg-light mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                <h1 class="mt-3">
+                    Veri Analitiği Fiyatlandırma
+                </h1>
+                <p>Profesyonel ekibimiz tarafından verilen bütün hizmetlerle ilgili bizimle iletişime geçerek fiyat öğrenebilirsiniz.</p>
+
+                @{Html.RenderAction("hizmetiletisim", "Partial");}
+
+            </div>
+        </div>
+    </div>
+

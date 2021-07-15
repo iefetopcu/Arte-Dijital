@@ -1,0 +1,117 @@
+﻿@model ArteDijital.Models.Entity.Freelancer
+
+@{
+    ViewBag.Title = "Freelancer Çalışma İmkanı";
+    ViewBag.Description = " Freelancer CV Gönder , Freelance İş Sahibi Ol , Freelance işler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Freelancer == "ok")
+{
+    <div class="container">
+        <div class="alert alert-success text-center" role="alert">
+            <h4 class="alert-heading">Başarılı !</h4><br />
+            <p>Freelancer olarak bizimle çalışmak için başvurun alındı !</p>
+            <p class="mb-0">En kısa sürede seninle iletişime geçip, yeni işler yapmak istiyoruz...</p>
+            <p class="mb-0">Bu sürede bloğu incelemek ister misin?</p>
+            <a href="https://blog.artedijital.com/" target="_blank">BLOĞA GİT</a>
+        </div>
+    </div>
+
+
+
+}
+
+@if (ViewBag.Freelancer == "no")
+{
+<div class="container">
+    <div class="alert alert-danger text-center" role="alert">
+        <h4 class="alert-heading">Başarısız !</h4><br />
+        <p>Bu mail adresi kayıtlıdır. Lütfen başka mail adresi kullanınız.</p>
+
+    </div>
+</div>
+
+
+
+}
+<div class="container mt-2">
+    <div class="col-lg-12">
+        <div class="card card-small mb-4">
+            <div class="card-header border-bottom">
+                <h1 class="m-0">Freelancer Ol</h1>
+                <h6>Bizimle birlikte freelancer olarak çalışmak istersen, aşağıdaki formu doldur bize gönder.</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item p-3">
+                    <div class="row">
+                        <div class="col">
+                            <form method="post" enctype="multipart/form-data">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="feFirstName">Ad</label>
+                                        <input type="text" class="form-control" id="feFirstName" placeholder="Ad" name="name" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="feLastName">Soyad</label>
+                                        <input type="text" class="form-control" id="feLastName" placeholder="Soyad" name="surname" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="feEmailAddress">Email</label>
+                                        <input type="email" class="form-control" id="feEmailAddress" placeholder="Email" name="email" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="fePassword">Cep Telefonu</label>
+                                        <input type="text" class="form-control" id="fePassword" placeholder="530..." name="GSM" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feInputAddress">Web Sitesi Ya da Portföy</label>
+                                    <input type="text" class="form-control" id="feInputAddress" placeholder="www.ornek.com , github , linkedin " name="websiteurl">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="feInputCity">Şehir</label>
+                                        <input type="text" class="form-control" id="feInputCity" name="city" required>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="feInputState">Meslek Grubu</label>
+                                        @Html.DropDownListFor(m => m.jobid, (List<SelectListItem>)ViewBag.jobs, new { @class = "form-control" })<br />
+
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Bir Kaç Kelime İle Mesleğini Anlat</label>
+                                        <input type="text" class="form-control" id="inputZip" name="jobexplanation" placeholder="Web Tasarımcı, Grafik Tasarımcı" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="feDescription">Fotoğraf</label>
+                                        <input type="file" name="photourl" required class="form-control-file" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="feDescription">Detaylı Açıklama</label>
+                                        <textarea class="form-control" name="explanation" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+
+                                        <input type="checkbox" name="kvkkonay" required />
+                                        Kişisel verilerin korunması ve işlenmesi açık rıza metnini okudum, ve verilerimin işlenmesini kabul ediyorum. <br /><a href="@Url.Action("kvkk", "Home")" target="_blank"><h3>Metni Oku</h3></a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-accent">Gönder</button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

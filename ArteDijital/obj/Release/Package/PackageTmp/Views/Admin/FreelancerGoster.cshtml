@@ -1,0 +1,71 @@
+﻿@model ArteDijital.Models.Entity.Freelancer
+@{
+    ViewBag.Title = "FreelancerGoster";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card card-small mb-4 pt-3">
+                <div class="card-header border-bottom text-center">
+                    <div class="mb-3 mx-auto">
+                        <img class="rounded-circle" src="@Model.userphotourl" alt="User Avatar" width="110">
+                    </div>
+                    <h4 class="mb-0">@Model.name @Model.surname</h4>
+                    <span class="text-muted d-block mb-2">@Model.FreelanceJob.jobname</span>
+                    
+                </div>
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item p-4">
+                        <strong class="text-muted d-block mb-2">Açıklama</strong>
+                        <span>@Model.explanation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card card-small mb-4">
+                <div class="card-header border-bottom">
+                    <h6 class="m-0">Freelancers Detayları</h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-3">
+                        <div class="row">
+                            <div class="col">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="feFirstName"><b>Konum</b></label><br />
+                                            <label for="feFirstName">@Model.city</label>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="feFirstName"><b>Web Site</b></label><br />
+                                            <label for="feFirstName">@Model.websiteurl</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="feFirstName"><b>E-Mail</b></label><br />
+                                            <label for="feFirstName">@Model.email</label>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="feFirstName"><b>Telefon</b></label><br />
+                                            <label for="feFirstName">@Model.gsm</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="feFirstName"><b>Bir kaç kelime ile kendini anlat</b></label><br />
+                                        <label for="feFirstName">@Model.jobexplanation</label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-accent">Pdf Aktar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
